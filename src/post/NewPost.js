@@ -52,7 +52,10 @@ class NewPost extends Component {
 			const fileSize = name === 'photo' ? event.target.files[0].size : 0;
 			console.log("FIlesize",fileSize);
 			this.postData.set(name, value)
-			this.setState({[name]: value, fileSize:fileSize});
+			this.setState({[name]: value})
+			if(name === 'photo'){
+			this.setState({fileSize:fileSize})
+			}
 
 
 
