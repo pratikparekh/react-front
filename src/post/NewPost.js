@@ -63,8 +63,9 @@ class NewPost extends Component {
 			// stop page reloading
 			event.preventDefault() 
 			this.setState({loading:true})
-			if(this.isValid()){
 			
+			if(this.isValid()){
+			console.log(this.state.fileSize);
 			//console.log("pass",password);
 			
 
