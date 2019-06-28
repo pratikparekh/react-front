@@ -50,7 +50,7 @@ class NewPost extends Component {
 			this.setState({error:""});
 			const value = name === 'photo' ? event.target.files[0] : event.target.value
 			const fileSize = name === 'photo' ? event.target.files[0].size : 0;
-			console.log(fileSize);
+			console.log("FIlesize",fileSize);
 			this.postData.set(name, value)
 			this.setState({[name]: value, fileSize:fileSize});
 
@@ -65,7 +65,7 @@ class NewPost extends Component {
 			this.setState({loading:true})
 			
 			if(this.isValid()){
-			console.log(this.state.fileSize);
+			console.log("Valid",this.state.fileSize);
 			//console.log("pass",password);
 			
 
