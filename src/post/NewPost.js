@@ -33,6 +33,7 @@ class NewPost extends Component {
 		const {title,body,fileSize}=this.state
 
 		if(fileSize>1000000){
+			console.log("yess");
 			this.setState({error:"FileSize should be less than 1000kb",loading:false})
 			return false;
 		}
@@ -49,6 +50,7 @@ class NewPost extends Component {
 			this.setState({error:""});
 			const value = name === 'photo' ? event.target.files[0] : event.target.value
 			const fileSize = name === 'photo' ? event.target.files[0].size : 0;
+			console.log(filesize);
 			this.postData.set(name, value)
 			this.setState({[name]: value, fileSize:fileSize});
 
