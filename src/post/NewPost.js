@@ -33,7 +33,7 @@ class NewPost extends Component {
 		const {title,body,fileSize}=this.state
 
 		if(fileSize>1000000){
-			this.setState({error:"FileSize should be less than 1000kb",loading:false"})
+			this.setState({error:"FileSize should be less than 1000kb",loading:false})
 			return false;
 		}
 
